@@ -2,20 +2,30 @@ const swiper = new Swiper('.main-slider', {
   slidesPerView: 2,
   spaceBetween: 30,
   loop: true,
-  breakpoints: {
-     375:  {
+  navigation: {
+    nextEl: '.main-slider__arrow',
+  },
+   breakpoints: {
+     320:  {
       slidesPerView: 1,
       
     },
-      991: {
+      768: {
       slidesPerView: 2
     },
 
     
   },
-  navigation: {
-    nextEl: '.main-slider__arrow',
-  },
 
 
 });
+ let burger = document.querySelector('.menu-burger');
+ let closeMenu = document.querySelector('.header__menu-close');
+ let menuMobile = document.querySelector('.header');
+
+ burger.addEventListener('click', ()=> {
+   menuMobile.style.display = "block";
+ });
+ closeMenu.addEventListener('click', ()=> {
+   menuMobile.style.display = "none";
+ });
