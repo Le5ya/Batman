@@ -195,6 +195,7 @@ img {
   display: none;
 }
 .main {
+  min-height: 100vh;
   padding-top: 18.7rem;
   padding-bottom: 10.4rem;
   background: url("../img/back.jpg");
